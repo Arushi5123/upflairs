@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Information Form</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #DAA520, #000000);
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background: linear-gradient(to right, #DAA520, #000000);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 600px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            color: white;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background: #DAA520;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background: black;
+            color: #DAA520;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Flight Information</h1>
+        <form action="{{ url_for('flight') }}", method='post'>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="flight-distance">Flight Distance</label>
+                <input type="number" id="flight-distance" name="flight_distance" required>
+            </div>
+            <div class="form-group">
+                <label for="inflight-entertainment">Inflight Entertainment</label>
+                <select id="inflight-entertainment" name="inflight_entertainment" required>
+                    <option value="">Select rating</option>
+                    <option value="0">very poor</option>
+                    <option value="1">poor</option>
+                    <option value="2">good</option>
+                    <option value="3">very good</option>
+                    <option value="4">Excelent</option>
+                    <option value="5">Outstanding</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="baggage-handling">Baggage Handling</label>
+                <select id="baggage-handling" name="baggage_handling" required>
+                    <option value="">Select rating</option>
+                    <option value="1">poor</option>
+                    <option value="2">good</option>
+                    <option value="3">very good</option>
+                    <option value="4">Excelent</option>
+                    <option value="5">Outstanding</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cleanliness">Cleanliness</label>
+                <select id="cleanliness" name="cleanliness" required>
+                    <option value="">Select rating</option>
+                    <option value="1">poor</option>
+                    <option value="2">good</option>
+                    <option value="3">very good</option>
+                    <option value="4">Excelent</option>
+                    <option value="5">Outstanding</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="departure-delay">Departure Delay in Minutes</label>
+                <input type="number" id="departure-delay" name="departure_delay" required>
+            </div>
+            <div class="form-group">
+                <label for="arrival-delay">Arrival Delay in Minutes</label>
+                <input type="number" id="arrival-delay" name="arrival_delay" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select gender</option>
+                    <option value="1">Male</option>
+                    <option value="0">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="customer-type">Customer Type</label>
+                <select id="customer-type" name="customer_type" required>
+                    <option value="">Select customer type</option>
+                    <option value="1">Disloyal Customer</option>
+                    <option value="0">Loyal Customer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="type-of-travel">Type of Travel</label>
+                <select id="type-of-travel" name="type_of_travel" required>
+                    <option value="">Select travel type</option>
+                    <option value="1">Personal Travel</option>
+                    <option value="0">Business Travel</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="class">Class_Eco</label>
+                <select id="class" name="class_ecoplus" required>
+                    <option value="">Select class</option>
+                    <option value="1">Economy</option>
+                    <option value="0">Economy Plus</option>
+                    <option value="0">Business</option>
+                </select>
+               <!-- <div class="form-group">
+                    <label for="class">Class_Ecoplus</label>
+                    <select id="class" name="class_ecoplus" required>
+                        <option value="">Select class</option>
+                        <option value="0">Economy</option>
+                        <option value="1">Economy Plus</option>
+                        <option value="0">Business</option>
+                    </select>-->
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

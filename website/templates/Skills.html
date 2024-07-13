@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+      <div class="container">
+        <a class="navbar-brand" href="#">Arushi Mathur</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" ></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Aboutme">Aboutme</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Project">Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Contactme">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Experience">Experience</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    <!-- Header -->
+    <header class="bg-danger text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">My Skills</h1>
+            <p class="lead">Discover the skills and expertise we bring to the table.</p>
+        </div>
+    </header>
+
+    <!-- Skills Section -->
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h2 class="font-weight-light">Our Expertise</h2>
+                    <p>We excel in various domains to deliver the best results.</p>
+                </div>
+            </div>
+            <section id="services" class="services bg-light py-5">
+              <div class="container text-center">
+                <h2 class="mb-4">Skills</h2>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                      <div class="card-body">
+                        <h5 class="card-title">Machine learning</h5>
+                        <p class="card-text">I work on most of the steps in machine learning life cycle like Data preparation, Data validation, Data visualisation, Data minnig, Data cleaning, Feature selection and much more  .</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                      <div class="card-body">
+                        <h5 class="card-title">Data visualization</h5>
+                        <p class="card-text">I can extract useful information using various plots such as lineplot,scatterplot,barplot,histplot,replot,catplot using matplotlib and seaborn.</p>
+                        <ul>
+                            {% for category, obj_list in category_list %}
+                                <li>{{ category }}
+                                <ul>
+                                    {% for obj in obj_list %}
+                                        <li>{{ obj }}</li>
+                                    {% endfor %}
+                                </ul>
+                                </li>
+                            {% endfor %}
+                        </ul>  </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                      <div class="card-body">
+                        <h5 class="card-title">Data cleaning</h5>
+                        <p class="card-text">I can help in data cleaning which involves dealing with missing or NaN values or removing any irrelevent data which decreses the accuracy of machine learning model using pandas. </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                      <div class="card-body">
+                        <h5 class="card-title">Non-Technical Skills</h5>
+                        <p class="card-text">Some of my non technical skills involves Swimming, Painting, Singing and commmunication skills</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+           
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 CompanyName. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Homepage</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+ <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container">
+      <a class="navbar-brand" href="#">Arushi Mathur</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" ></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Aboutme">Aboutme</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Project">Project</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Contactme">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Experience">Experience</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <!--<section id="hero" class="hero">
+    <div class="container text-center">
+      <h1 class="display-4">Welcome to My Portfolio</h1>
+      <p class="lead">I am passionate about creating meaningful projects.</p>
+    </div>
+  </section>
+   <!-- Services Section -->
+   <!--
+    <!-- Footer -->
+    <!--<footer class="footer bg-dark text-center py-4">
+        <div class="container">
+          <span class="text-muted">&copy; 2024 Your Name. All rights reserved.</span>
+        </div>
+      </footer>
+    
+      <!-- Bootstrap JS and jQuery (Optional, for dropdowns and toggles) -->
+      <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+    </html>
+    

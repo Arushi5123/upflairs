@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education Page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    .education-card {
+      margin-bottom: 30px;
+    }
+    .education-timeline {
+      position: relative;
+      padding: 1rem 0;
+    }
+    .education-timeline:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #e9ecef;
+    }
+    .education-timeline .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+    .education-timeline .timeline-item:nth-child(odd) {
+      left: 0;
+    }
+    .education-timeline .timeline-item:nth-child(even) {
+      left: 50%;
+    }
+    .education-timeline .timeline-item:before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      width: 20px;
+      height: 20px;
+      background: #007bff;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .education-timeline .timeline-item:nth-child(odd):before {
+      right: -10px;
+    }
+    .education-timeline .timeline-item:nth-child(even):before {
+      left: -10px;
+    }
+    @media (max-width: 767px) {
+      .education-timeline:before {
+        left: 10%;
+      }
+      .education-timeline .timeline-item {
+        width: 100%;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+      }
+      .education-timeline .timeline-item:nth-child(odd):before,
+      .education-timeline .timeline-item:nth-child(even):before {
+        left: -1.25rem;
+        right: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#">Arushi Mathur</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" ></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Aboutme">Aboutme</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Project">Project</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Contactme">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Experience">Experience</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Header Section -->
+  <header class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4">My Education</h1>
+      <p class="lead">A timeline of my academic achievements.</p>
+    </div>
+  </header>
+
+  <!-- Education Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="education-timeline">
+        <!-- Education Item 1 -->
+        <div class="timeline-item education-card">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Bachelor of Technology in Computer Science</h5>
+              <p class="card-text">Govt. Women Engineering College,Ajmer, 2022 - 2026</p>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <!-- Education Item 2 -->
+        <div class="timeline-item education-card">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Studied in St Stephen's Sr. Sec. School,Ajmer</h5>
+              <p class="card-text">2019 - 2021</p>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <!-- Education Item 3 -->
+        <div class="timeline-item education-card">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Cybersecurity</h5>
+              <p class="card-text">Online Course, 2023</p>
+              <p class="card-text">Completed an extensive online course covering linux, Python, Computer Networks.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item education-card">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Data Science</h5>
+              <p class="card-text">Offline Course, 2024</p>
+              <p class="card-text">Completed an extensive offline course covering Python libraries like numpy, pandas, matplotlib, seaborn including machine learning.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Homepage</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Arushi Mathur</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" ></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Aboutme">Aboutme</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Project">Project</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Contactme">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Experience">Experience</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+ <!-- <section id="hero" class="hero">
+    <div class="container text-center">
+      <h1 class="display-4">Welcome to My Portfolio</h1>
+      <p class="lead">I am passionate about creating meaningful projects.</p>
+    </div>
+  </section>
+   <!--Education section-->
+   <!--<section id="about" class="about py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2 class="mb-4">Education</h2>
+          <p class="text-justify">School name:St. Stephen's sr. sec school,Ajmer<br>10th percentage:86%<br>12th percentage:86%<br>Graduation from:Govt. Women Engineering College,Ajmer<br>Graduating in 2026</p>
+        </div>
+        <div class="col-lg-6">
+
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+ <!-- <footer class="footer bg-dark text-center py-4">
+    <div class="container">
+      <span class="text-muted">&copy; 2024 Your Name. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and jQuery (Optional, for dropdowns and toggles) -->
+  <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
